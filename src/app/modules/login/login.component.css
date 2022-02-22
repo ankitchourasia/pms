@@ -1,0 +1,12 @@
+#login-container{
+  height: 100vh;
+  align-content: center;
+  background-image: url('../../../assets/images/bg-login.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card{
+  margin: auto;
+  background-color: rgba(86, 126, 131, 0.5) !important;
+}

@@ -1,0 +1,11 @@
+{
+  "/php": {
+    "target": "http://mpezgis.in",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/php/" : "/"
+    }
+  }
+}
