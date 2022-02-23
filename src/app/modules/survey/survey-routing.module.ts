@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DailySurveyProgressComponent } from './daily-survey-progress/daily-survey-progress.component';
+import { SurveyProjectDetailsComponent } from './survey-project-details/survey-project-details.component';
 import { SurveyComponent } from './survey.component';
 
 const routes: Routes = [
@@ -11,6 +12,10 @@ const routes: Routes = [
       {
         path: 'daily-survey-progress', 
         component: DailySurveyProgressComponent
+      },
+      {
+        path: 'project-details', 
+        component: SurveyProjectDetailsComponent
       },
       {
         path: '', 

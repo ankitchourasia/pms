@@ -5,13 +5,15 @@ import { SurveyRoutingModule } from './survey-routing.module';
 import { NavbarModule } from 'src/app/components/navbar/navbar.module';
 import { SurveyComponent } from './survey.component';
 import { FormsModule } from '@angular/forms';
+import { SurveyProjectDetailsComponent } from './survey-project-details/survey-project-details.component';
 
 
 
 @NgModule({
   declarations: [
     DailySurveyProgressComponent,
-    SurveyComponent
+    SurveyComponent,
+    SurveyProjectDetailsComponent
   ],
   imports: [
     CommonModule,

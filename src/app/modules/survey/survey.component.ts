@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-survey',
@@ -7,11 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SurveyComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-    console.log("inside survey oninit");
-    
   }
+
+  menuClicked(path : any){
+    this.router.navigate([path], { relativeTo: this.route });
+  }
+
 
 }

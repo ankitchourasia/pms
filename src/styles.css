@@ -16,6 +16,11 @@
     flex-basis: 85%;
 }
 
+.side-menu-active{
+    background: #217292 !important;
+    color:  grey !important;
+}
+
 #content{
     display: flex;
 }

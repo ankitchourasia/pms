@@ -1,0 +1,47 @@
+<div class="card">
+    <div class="card-header bg-secondary text-white text-center">
+        Project Details
+    </div>
+    <div class="card-body">
+        <div class="d-flex justify-content-center">
+            <div class="input-group input-group-sm mb-3" style="width: initial !important;">
+                <input type="text" pattern="\d+" maxlength="8" class="form-control" placeholder="PROJECT ID" aria-label="Project Id" [(ngModel)]="projectId" aria-describedby="button-addon">
+                <button class="btn btn-primary" type="button" id="button-addon" (click)="searchButtonClicked()" [disabled]="loading">Search</button>
+            </div>
+        </div>
+        <div>
+            <table class="table table-sm table-bordered text-center">
+                <thead>
+                    <tr>
+                        <th>SNO</th>
+                        <th>PROJECT ID</th>
+                        <th>TASK NUMBER</th>
+                        <th>RESOURCE NAME</th>
+                        <th>RESOURCE ALIAS</th>
+                        <th>QUANTITY</th>
+                        <th>STATUS</th>
+                        <!-- <th></th>
+                        <th></th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of items; let i = index">
+                        <td>{{i + 1}}</td>
+                        <td>{{item.SB_PROJECT_ID}}</td>
+                        <td>{{item.TASK_NUMBER}}</td>
+                        <td>{{item.RESOURCE_NAME}}</td>
+                        <td>{{item.RESOURCE_ALIAS}}</td>
+                        <td>{{item.QUANTITY}}</td>
+                        <td>{{item.STATUS}}</td>
+                    </tr>
+                    <tr *ngIf="!items">
+                        <td colspan="7" *ngIf="!loading">No Records Found...</td>
+                        <td colspan="7" *ngIf="loading">
+                            <span *ngIf="loading">loading...<span class="spinner-border spinner-border-sm"></span></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
