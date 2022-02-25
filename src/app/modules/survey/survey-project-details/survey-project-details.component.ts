@@ -11,6 +11,7 @@ export class SurveyProjectDetailsComponent implements OnInit {
   projectId : any;
   items : any;
   loading : boolean = false;
+  searchText : any;
   constructor(private surveyService : SurveyService) { }
 
   ngOnInit(): void {

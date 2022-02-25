@@ -10,6 +10,7 @@
             </div>
         </div>
         <div>
+            <input type="text" class="form-control search-field" [(ngModel)]="searchText" placeholder="Search here" [disabled]="!items">
             <table class="table table-sm table-bordered text-center">
                 <thead>
                     <tr>
@@ -25,7 +26,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let item of items; let i = index">
+                    <tr *ngFor="let item of items | searchFilter : searchText; let i = index">
                         <td>{{i + 1}}</td>
                         <td>{{item.SB_PROJECT_ID}}</td>
                         <td>{{item.TASK_NUMBER}}</td>

@@ -10,7 +10,8 @@ import { GlobalConstants } from 'src/app/utility/global-constants';
 })
 export class DailySurveyProgressComponent implements OnInit {
 
-  constructor(private surveyService : SurveyService, private paginationService : PaginationService, private globalConstant : GlobalConstants) { }
+  constructor(private surveyService : SurveyService, private paginationService : PaginationService, 
+    private globalConstant : GlobalConstants) { }
 
   ngOnInit(): void {
     this.getData();
@@ -61,15 +62,6 @@ export class DailySurveyProgressComponent implements OnInit {
   exportclicked(tableId : any){
     this.globalConstant.exportAsExcelFile(this.sanctionedEstimates, 'daily_progress_report');
     // this.exportTableToExcel(tableId, 'daily_progress_report');
-  }
-
-  exportTableToExcel(tableID : any, fileName : any){
-    let dataType = 'data:application/vnd.ms-excel';
-    fileName = fileName ? fileName : 'file';
-    let htmltable = document.getElementById(tableID);
-    let tableHTML = htmltable?.outerHTML;
-    // this.downloadHTML(tableHTML, dataType, fileName, 'xls');
-    this.downloadByBlob(tableHTML, dataType, fileName, 'xls');
   }
 
   downloadByBlob(content : any, dataType : any, fileName : any, extention : any){

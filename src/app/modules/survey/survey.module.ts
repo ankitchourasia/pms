@@ -6,6 +6,7 @@ import { NavbarModule } from 'src/app/components/navbar/navbar.module';
 import { SurveyComponent } from './survey.component';
 import { FormsModule } from '@angular/forms';
 import { SurveyProjectDetailsComponent } from './survey-project-details/survey-project-details.component';
+import { SearchFilterPipe } from 'src/app/pipes/search-filter.pipe';
 
 
 
@@ -13,7 +14,8 @@ import { SurveyProjectDetailsComponent } from './survey-project-details/survey-p
   declarations: [
     DailySurveyProgressComponent,
     SurveyComponent,
-    SurveyProjectDetailsComponent
+    SurveyProjectDetailsComponent,
+    SearchFilterPipe
   ],
   imports: [
     CommonModule,
